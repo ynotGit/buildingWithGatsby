@@ -16,9 +16,13 @@ const IndexPage = ({data}) => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
-   
+    <br />
     {data.allMarkdownRemark.edges.map(post => (
-      <a href={post.node.frontmatter.path}>{post.node.frontmatter.title}</a>
+      <Link 
+        key={post.node.id}
+        to={post.node.frontmatter.path}>
+        {post.node.frontmatter.title}
+      </Link>
     ))}
   </Layout>
 )
@@ -28,6 +32,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(limit: 10) {
       edges {
         node {
+          id
           frontmatter {
             title
             path
