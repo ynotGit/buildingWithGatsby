@@ -1,3 +1,17 @@
+// Table of Contents:
+//   • Gatsby Default SCSS.
+//   • Header
+//   • Nav
+//   • Landing
+//   • About
+//   • Services
+//   • Work
+//   • Contact
+//   • Blog
+//   • Footer
+//   • Media Queries
+
+//Gatsby Default SCSS
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -617,6 +631,13 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
+
+//Landing
+
+
+
+
+//Media Queries
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
