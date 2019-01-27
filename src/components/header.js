@@ -9,8 +9,13 @@ const HeaderWrapper = styled.div `
 
 const HeaderContainer = styled.div `
   margin: 0 auto;
-  maxWidth: 960;
+  maxWidth: 960px;
   padding: 1.45rem 1.0875rem;
+`
+
+const StyledLink = styled(props => <Link {...props} />)`
+    color: white;
+    textDecoration: none;
 `
 
 
@@ -18,16 +23,9 @@ const HeaderContainer = styled.div `
 const Header = () => (
   <HeaderWrapper>
     <HeaderContainer>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-        </Link>
-      </h1>
+    <StyledLink to="/">
+      <h1>Hello</h1>
+    </StyledLink>
     </HeaderContainer>
   </HeaderWrapper>
 )
