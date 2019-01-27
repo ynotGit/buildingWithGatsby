@@ -4,28 +4,26 @@ import styled from 'styled-components'
 
 const HeaderWrapper = styled.div `
   background: rebeccapurple;
-  marginBottom: 2rem,
+  margin-bottom: 2rem;
 `
 
 const HeaderContainer = styled.div `
   margin: 0 auto;
-  maxWidth: 960px;
+  max-width: 960px;
   padding: 1.45rem 1.0875rem;
 `
 
-const StyledLink = styled(props => <Link {...props} />)`
+const StyledLink = styled(Link)`
     color: white;
-    textDecoration: none;
+    text-decoration: none;
 `
-
-
 
 const Header = () => (
   <HeaderWrapper>
     <HeaderContainer>
-    <StyledLink to="/">
-      <h1>Hello</h1>
-    </StyledLink>
+      <StyledLink to="/">
+        <h1>Hello</h1>    
+      </StyledLink>
     </HeaderContainer>
   </HeaderWrapper>
 )
