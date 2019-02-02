@@ -11,10 +11,14 @@ const HeaderWrapper = styled.div `
 
 const HeaderContainer = styled.div `
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   display: flex;
   align-items: center;
   text-align: center;
+`
+
+const DarkModeSwitch = styled.div `
+
 `
 
 const StyledLogoLink = styled(Link)`
@@ -26,6 +30,12 @@ const StyledLogoLink = styled(Link)`
 const Header = () => (
   <HeaderWrapper>
     <HeaderContainer>
+      <DarkModeSwitch>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </DarkModeSwitch>
       <StyledLogoLink to="/">
         <img src={SmallLogo} alt="Header Logo"/>  
       </StyledLogoLink>
