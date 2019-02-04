@@ -17,28 +17,46 @@ const HeaderContainer = styled.div `
   text-align: center;
 `
 
-const DarkModeSwitch = styled.div `
-
-`
-
 const StyledLogoLink = styled(Link)`
   flex: 1;
+  align-items: center;
   color: white;
-  text-decoration: none;
+
+  > h2 {
+    display: inline-block;
+    padding: 0.5rem;
+  }
+`
+
+const Nav = styled.nav `
+  flex: 1;
+
+  > ul {
+      list-style: none;
+
+    > li {
+      display: inline-block;
+      padding: 0 0.5rem;
+    }
+  }
 `
 
 const Header = () => (
   <HeaderWrapper>
     <HeaderContainer>
-      <DarkModeSwitch>
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label>
-      </DarkModeSwitch>
       <StyledLogoLink to="/">
-        <img src={SmallLogo} alt="Header Logo"/>  
+        <img src={SmallLogo} alt="Header Logo"/> 
+        <h2>Y Not Innovate</h2> 
       </StyledLogoLink>
+      <Nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>
+      </Nav>
     </HeaderContainer>
   </HeaderWrapper>
 )
