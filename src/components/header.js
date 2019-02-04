@@ -2,24 +2,23 @@ import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 
-import SmallLogo from '../images/smallLogo.png'
+import HeaderLogo from '../images/headerLogo.png'
 
 const HeaderWrapper = styled.div `
-  background: rebeccapurple;
+  background: whitesmoke;
   margin-bottom: 1rem;
 `
 
 const HeaderContainer = styled.div `
   margin: 0 auto;
-  padding: 0.5rem 0;
+  padding: 0.5rem 3rem;
   display: flex;
   align-items: center;
-  text-align: center;
+  align-content: center;
 `
 
 const StyledLogoLink = styled(Link)`
   flex: 1;
-  align-items: center;
   color: white;
 
   > h2 {
@@ -30,9 +29,11 @@ const StyledLogoLink = styled(Link)`
 
 const Nav = styled.nav `
   flex: 1;
-
+  justify-content: flex-end;
+  
   > ul {
       list-style: none;
+      text-align: right;
 
     > li {
       display: inline-block;
@@ -45,8 +46,7 @@ const Header = () => (
   <HeaderWrapper>
     <HeaderContainer>
       <StyledLogoLink to="/">
-        <img src={SmallLogo} alt="Header Logo"/> 
-        <h2>Y Not Innovate</h2> 
+        <img src={HeaderLogo} alt="Header Logo"/> 
       </StyledLogoLink>
       <Nav>
         <ul>
