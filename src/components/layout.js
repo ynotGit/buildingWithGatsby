@@ -6,6 +6,7 @@ import {
 } from 'gatsby'
 
 import Header from './header'
+import Landing from './landing'
 import './layout.scss'
 
 const Layout = ({
@@ -29,7 +30,9 @@ const Layout = ({
       Header siteTitle = {
         data.site.siteMetadata.title
       }
-      /> <
+      /> 
+      <Landing />
+      <
       div style = {
         {
           margin: `0 auto`,
