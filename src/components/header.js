@@ -29,8 +29,7 @@ const StyledLogoLink = styled(Link)`
 
 const Nav = styled.nav `
   flex: 1;
-  justify-content: flex-end;
-  
+
   > ul {
       list-style: none;
       text-align: right;
