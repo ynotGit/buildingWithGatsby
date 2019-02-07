@@ -6,7 +6,6 @@ import HeaderLogo from '../images/headerLogo.png'
 
 const HeaderWrapper = styled.div `
   background: whitesmoke;
-  margin-bottom: 1rem;
 `
 
 const HeaderContainer = styled.div `

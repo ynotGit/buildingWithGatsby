@@ -12,13 +12,16 @@ const LandingWrapper = styled.div `
 `
 
 const LandingContent = styled.div `
-
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 const Landing = () => (
     <LandingWrapper>
         <LandingContent>
-        
+            <h1>Landing Title</h1>
         </LandingContent>
     </LandingWrapper>
 )
