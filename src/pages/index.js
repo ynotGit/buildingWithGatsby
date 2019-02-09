@@ -7,15 +7,16 @@ import '../styles/main.scss'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
+import Landing from '../components/landing'
+
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <Landing />
     <h1>Yo peeps</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+
     <Link to="/page-2/">Go to page 2</Link>
     <br />
     <ul>
@@ -23,7 +24,8 @@ const IndexPage = ({data}) => (
         <li>
           <Link 
             key={post.node.id}
-            to={post.node.frontmatter.path} >
+            to={post.node.frontmatter.path} 
+          >
             {post.node.frontmatter.title}
           </Link>
         </li>

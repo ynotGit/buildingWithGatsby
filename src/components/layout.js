@@ -31,7 +31,7 @@ const Layout = ({
         data.site.siteMetadata.title
       }
       /> 
-      <Landing />
+   
       <
       div style = {
         {
