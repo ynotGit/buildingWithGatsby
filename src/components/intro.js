@@ -17,7 +17,9 @@ const IntroContainer = styled.div `
 const Intro = () => (
     <IntroWrapper>
         <IntroContainer>
-            
+            <h1>We build slick websites with friendly user interaction at the heart of what
+                we do.
+            </h1>
         </IntroContainer>
     </IntroWrapper>
 )
