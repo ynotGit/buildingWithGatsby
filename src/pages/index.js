@@ -8,12 +8,14 @@ import SEO from '../components/seo'
 
 import Landing from '../components/landing'
 import Intro from '../components/intro'
+import Services from '../components/services'
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Landing />
     <Intro />
+    <Services />
     <h1>Yo peeps</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
