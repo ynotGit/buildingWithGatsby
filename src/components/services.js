@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FaBeer } from 'react-icons/fa';
 
 const ServicesWrapper = styled.div `
     height: 400px;
@@ -17,7 +18,7 @@ const ServicesContainer = styled.div `
 const Services = () => (
     <ServicesWrapper>
         <ServicesContainer>
-           
+           <FaBeer />
         </ServicesContainer>
     </ServicesWrapper>
 )
