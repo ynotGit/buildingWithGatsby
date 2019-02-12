@@ -24,8 +24,14 @@ const ServiceColumn = styled.div `
         padding: 20px 0;
     }
 
-    > FaPencilRuler {
-        font-size: 100px;
+    > svg {
+        font-size: 5rem;
+        padding: 0.7rem;
+        margin: 1rem 0;
+        color: whitesmoke;
+        background: black;
+        border-radius: 50%;
+
     }
 `
 
