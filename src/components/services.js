@@ -17,26 +17,30 @@ const ServicesContainer = styled.div `
     justify-content: center;
 `
 
-const DesignContainer = styled.div `
+const ServiceColumn = styled.div `
     flex: 1;
-`
 
-const UiUxContainer = styled.div `
-    flex: 1;
-`
+    > h2 {
+        padding: 20px 0;
+    }
 
-const CodeContainer = styled.div `
-    flex: 1;
+    > FaPencilRuler {
+        font-size: 100px;
+    }
 `
 
 const List = styled.ul `
     list-style-type: none;
+
+    > li {
+        padding: 10px 0;
+    }
 `
 
 const Services = () => (
     <ServicesWrapper>
         <ServicesContainer>
-            <DesignContainer>
+            <ServiceColumn>
                 <h2>Design</h2>
                 <FaPencilRuler />
                 <List>
@@ -46,8 +50,8 @@ const Services = () => (
                     <li>-Digital Editing-</li>
                     <li>-Branding Design-</li>
                 </List>
-           </DesignContainer>
-           <UiUxContainer>
+           </ServiceColumn>
+           <ServiceColumn>
                 <h2>UI / UX</h2>
                 <FaMobileAlt />
                 <List>
@@ -57,8 +61,8 @@ const Services = () => (
                     <li>-Engaging-</li>
                     <li>-Accessible-</li>
                 </List>
-            </UiUxContainer>
-            <CodeContainer>
+            </ServiceColumn>
+            <ServiceColumn>
                 <h2>Code</h2>
                 <FaCode />
                 <List>
@@ -68,7 +72,7 @@ const Services = () => (
                     <li>-eCommerce / Online Stores-</li>
                     <li>-API Integration-</li>
                 </List>
-            </CodeContainer>
+            </ServiceColumn>
         </ServicesContainer>
     </ServicesWrapper>
 )
