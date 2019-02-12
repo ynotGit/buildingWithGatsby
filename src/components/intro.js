@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const IntroWrapper = styled.div `
+const IntroWrapper = styled.section `
     height: 400px;
 `
 

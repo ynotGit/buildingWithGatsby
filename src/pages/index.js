@@ -9,6 +9,7 @@ import SEO from '../components/seo'
 import Landing from '../components/landing'
 import Intro from '../components/intro'
 import Services from '../components/services'
+import Projects from '../components/projects'
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -16,9 +17,7 @@ const IndexPage = ({data}) => (
     <Landing />
     <Intro />
     <Services />
-    <h1>Yo peeps</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Projects />
 
     <Link to="/page-2/">Go to page 2</Link>
     <br />

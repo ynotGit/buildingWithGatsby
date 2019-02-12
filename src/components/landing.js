@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import LandingBackground from '../images/landingBackground.png'
 
-const LandingWrapper = styled.div `
+const LandingWrapper = styled.section `
     background: url(${LandingBackground});
     width: 100%;
     height: 400px;

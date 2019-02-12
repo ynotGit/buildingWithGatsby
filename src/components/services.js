@@ -4,7 +4,7 @@ import { FaPencilRuler } from 'react-icons/fa';
 import { FaMobileAlt } from 'react-icons/fa';
 import { FaCode } from 'react-icons/fa';
 
-const ServicesWrapper = styled.div `
+const ServicesWrapper = styled.section `
     height: 400px;
 `
 
