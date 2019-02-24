@@ -10,6 +10,7 @@ import Landing from '../components/landing'
 import Intro from '../components/intro'
 import Services from '../components/services'
 
+
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -17,6 +18,8 @@ const IndexPage = ({data}) => (
     <Intro />
     <Services />
 
+    <Link to="/page-2/">Go to page 2</Link>
+    <br />
     <ul>
       {data.allMarkdownRemark.edges.map(post => (
         <li>
