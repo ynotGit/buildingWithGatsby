@@ -9,7 +9,6 @@ import SEO from '../components/seo'
 import Landing from '../components/landing'
 import Intro from '../components/intro'
 import Services from '../components/services'
-import Projects from '../components/projects'
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -17,10 +16,7 @@ const IndexPage = ({data}) => (
     <Landing />
     <Intro />
     <Services />
-    <Projects />
 
-    <Link to="/page-2/">Go to page 2</Link>
-    <br />
     <ul>
       {data.allMarkdownRemark.edges.map(post => (
         <li>

@@ -1,6 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from 'styled-components'
 import Layout from "../components/layout";
+
+const BlogPostContainer = styled.section `
+  color: red;
+`
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -9,7 +14,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-    <div className="blog-post-container">
+    <BlogPostContainer>
       <div className="blog-post">
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
@@ -18,7 +23,7 @@ export default function Template({
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
-    </div>
+    </BlogPostContainer>
     </Layout>
   )
 }
