@@ -5,5 +5,5 @@ date: "2019-01-14"
 title: "My first blog post"
 published: true
 ---
-
+![Test](test.png)
 #TEST
