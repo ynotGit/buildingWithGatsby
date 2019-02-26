@@ -16,7 +16,6 @@ const BlogContainer = styled.section `
 
 const StyledLink = styled(Link) `
     flex: 1;
-
 `
 
 
@@ -35,14 +34,7 @@ const Blog = () => (
                 frontmatter {
                   title
                   path
-                  cover_image {
-                      publicURL
-                      childImageSharp {
-                          sizes(maxWidth: 1240) {
-                              srcSet
-                          }
-                      }
-                  }
+                  date
                 }
               }
             }
@@ -57,6 +49,8 @@ const Blog = () => (
                         key={post.node.id}
                         to={post.node.frontmatter.path} 
                         >
+                        {post.node.frontmatter.date}
+                        <br />
                         {post.node.frontmatter.title}
                         </StyledLink>
                     ))}  
