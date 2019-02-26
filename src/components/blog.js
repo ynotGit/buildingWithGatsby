@@ -4,11 +4,19 @@ import {StaticQuery, graphql} from 'gatsby'
 import styled from 'styled-components'
 
 const BlogWrapper = styled.section `
-    width: 100%;
+    height: 400px;
 `
 
 const BlogContainer = styled.section `
-    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+const StyledLink = styled(Link) `
+    flex: 1;
+
 `
 
 
@@ -37,20 +45,19 @@ const Blog = () => (
             <BlogWrapper>
                 <BlogContainer>
                     {data.allMarkdownRemark.edges.map(post => (
-                        <Link 
+                        <StyledLink 
                         key={post.node.id}
                         to={post.node.frontmatter.path} 
                         >
                         {post.node.frontmatter.title}
-                        </Link>
+                        </StyledLink>
                     ))}  
+                    <br />
                     <Link to="blogHome">More Posts</Link>
                 </BlogContainer>
             </BlogWrapper>
         )}
     />
 )
-
-
 
 export default Blog
