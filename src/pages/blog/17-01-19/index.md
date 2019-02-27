@@ -5,7 +5,7 @@ date: "2019-01-17"
 title: "My fourth blog post"
 section: blog
 tags: design, development
-cover_image: "test.png"
+coverImage: "test.png"
 published: true
 ---
 ![Test](test.png)

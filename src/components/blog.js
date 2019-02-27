@@ -12,9 +12,14 @@ const BlogContainer = styled.section `
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 `
 
-const StyledLink = styled(Link) `
+const BlogLink = styled(Link) `
+    flex: 1;
+`
+
+const BlogHomeLink = styled(Link) `
     flex: 1;
 `
 
@@ -45,17 +50,16 @@ const Blog = () => (
             <BlogWrapper>
                 <BlogContainer>
                     {data.allMarkdownRemark.edges.map(post => (
-                        <StyledLink 
+                        <BlogLink 
                         key={post.node.id}
                         to={post.node.frontmatter.path} 
                         >
                         {post.node.frontmatter.date}
                         <br />
                         {post.node.frontmatter.title}
-                        </StyledLink>
-                    ))}  
-                    <br />
-                    <Link to="blogHome">More Posts</Link>
+                        </BlogLink>
+                    ))}
+                    <BlogHomeLink to="blogHome">More Posts</BlogHomeLink>  
                 </BlogContainer>
             </BlogWrapper>
         )}
