@@ -2,9 +2,10 @@ import React from 'react'
 import {Link} from 'gatsby'
 import {StaticQuery, graphql} from 'gatsby'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 
 const BlogWrapper = styled.section `
-    height: 400px;
+
 `
 
 const BlogContainer = styled.section `
@@ -21,6 +22,10 @@ const BlogLink = styled(Link) `
 
 const BlogHomeLink = styled(Link) `
     flex: 1;
+`
+
+const CoverImage = styled(Img) `
+
 `
 
 
@@ -40,6 +45,14 @@ const Blog = () => (
                   title
                   path
                   date
+                  coverImage {
+                    publicURL
+                    childImageSharp {
+                      fluid(maxWidth: 360, maxHeight: 400 ) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -54,9 +67,11 @@ const Blog = () => (
                         key={post.node.id}
                         to={post.node.frontmatter.path} 
                         >
-                        {post.node.frontmatter.date}
-                        <br />
-                        {post.node.frontmatter.title}
+                          <CoverImage fluid={post.node.frontmatter.coverImage.childImageSharp.fluid} />
+                          <br />
+                          {post.node.frontmatter.title}
+                          <br />
+                          {post.node.frontmatter.date}
                         </BlogLink>
                     ))}
                     <BlogHomeLink to="blogHome">More Posts</BlogHomeLink>  

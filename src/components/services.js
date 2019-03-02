@@ -5,7 +5,7 @@ import { FaMobileAlt } from 'react-icons/fa';
 import { FaCode } from 'react-icons/fa';
 
 const ServicesWrapper = styled.section `
-    height: 400px;
+    
 `
 
 const ServicesContainer = styled.div `

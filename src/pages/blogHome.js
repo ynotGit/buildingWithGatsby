@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
-import Image from 'gatsby-image'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
       
 import Layout from '../components/layout'
@@ -24,7 +24,7 @@ const BlogLink = styled(Link) `
     padding: 20px;
 `
 
-const CoverImage = styled(Image) `
+const CoverImage = styled(Img) `
     align-self: flex-start;
 `
 
