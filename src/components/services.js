@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaPencilRuler } from 'react-icons/fa';
-import { FaMobileAlt } from 'react-icons/fa';
-import { FaCode } from 'react-icons/fa';
+import { FaPencilRuler, FaMobileAlt, FaCode } from 'react-icons/fa';
 
 const ServicesWrapper = styled.section `
     

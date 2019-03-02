@@ -8,6 +8,7 @@ import Landing from '../components/landing'
 import Intro from '../components/intro'
 import Services from '../components/services'
 import Blog from '../components/blog'
+import Contact from '../components/contact'
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <Intro />
     <Services />
     <Blog />
+    <Contact />
   </Layout>
 )
 

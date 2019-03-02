@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 const BlogWrapper = styled.section `
-
+  padding: 10px 0;
+  text-align: center;
 `
 
 const BlogContainer = styled.section `
@@ -13,11 +14,11 @@ const BlogContainer = styled.section `
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 `
 
 const BlogLink = styled(Link) `
     flex: 1;
+    padding: 20px;
 `
 
 const BlogHomeLink = styled(Link) `
@@ -48,7 +49,7 @@ const Blog = () => (
                   coverImage {
                     publicURL
                     childImageSharp {
-                      fluid(maxWidth: 360, maxHeight: 400 ) {
+                      fluid(maxWidth: 360, maxHeight: 300 ) {
                         ...GatsbyImageSharpFluid
                       }
                     }
@@ -61,11 +62,12 @@ const Blog = () => (
       `}
         render={data => (
             <BlogWrapper>
+              <h1>Latest Content</h1>
                 <BlogContainer>
                     {data.allMarkdownRemark.edges.map(post => (
                         <BlogLink 
-                        key={post.node.id}
-                        to={post.node.frontmatter.path} 
+                          key={post.node.id}
+                          to={post.node.frontmatter.path} 
                         >
                           <CoverImage fluid={post.node.frontmatter.coverImage.childImageSharp.fluid} />
                           <br />
