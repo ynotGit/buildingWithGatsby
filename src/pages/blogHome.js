@@ -2,25 +2,31 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
-import CoverImage from 'gatsby-image'
+import Image from 'gatsby-image'
 import styled from 'styled-components'
       
 import Layout from '../components/layout'
 import '../styles/main.scss'
 
 const BlogHomeWrapper = styled.section `
-  width: 100%;
+ 
 `
 
 const BlogHomeContainer = styled.div `
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 20px;
 `
 
-const coverImage = styled.img `
-  flex: 1;
-  
+const BlogLink = styled(Link) `
+    flex: 1 300px;
+    padding: 20px;
+`
+
+const CoverImage = styled(Image) `
+    align-self: flex-start;
 `
 
       
@@ -30,14 +36,14 @@ const BlogHome = ({data}) => (
         <BlogHomeWrapper>
           <BlogHomeContainer>
             {data.allMarkdownRemark.edges.map(post => (
-            <Link 
+            <BlogLink 
               key={post.node.id}
               to={post.node.frontmatter.path} 
             >
               {post.node.frontmatter.date}
               <CoverImage fluid={post.node.frontmatter.coverImage.childImageSharp.fluid} />
               {post.node.frontmatter.title}
-            </Link>
+            </BlogLink>
           ))}  
         </BlogHomeContainer>
       </BlogHomeWrapper>
@@ -61,7 +67,7 @@ export const pageQuery = graphql`
             coverImage {
               publicURL
               childImageSharp {
-                fluid(maxWidth: 1240, maxHeight: 260 ) {
+                fluid(maxWidth: 360 ) {
                   ...GatsbyImageSharpFluid
                 }
               }
