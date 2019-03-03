@@ -34,10 +34,19 @@ const FormInput = styled.input `
 
 const FormLabel = styled.label `
     margin: 10px 0;
+
+    > svg {
+        font-size: 30px;
+        vertical-align: middle;
+    }
 `
 
 const FromTextArea = styled.textarea `
     margin: 0 10px;
+`
+
+const FormButton = styled.input `
+    margin: 10px;
 `
 
 // - top envelope icons
@@ -54,41 +63,36 @@ const Contact = () => (
                 <FaEnvelopeOpenText />
                 <ContactRow>
                     <ContactColumn>
-                        <FaRegAddressCard />
-                        <FormLabel htmlFor="name">Name</FormLabel>
+                        <FormLabel htmlFor="name"><FaRegAddressCard /> Name</FormLabel>
                         <FormInput type="text" name="name" id="name" />
                     </ContactColumn>
                     <ContactColumn>
-                        <FaRegEnvelope />
-                        <FormLabel htmlFor="email">Email</FormLabel>
+                        <FormLabel htmlFor="email"><FaRegEnvelope /> Email</FormLabel>
                         <FormInput type="email" name="email" id="email" />
                     </ContactColumn>
                 </ContactRow>
                 <ContactRow>
                     <ContactColumn>
-                        <FaMobileAlt />
-                        <FormLabel htmlFor="number">Number</FormLabel>
+                        <FormLabel htmlFor="number"><FaMobileAlt /> Number</FormLabel>
                         <FormInput type="number" name="number" id="number" />
                     </ContactColumn>
                     <ContactColumn>
-                        <FaBuilding />
-                        <FormLabel htmlFor="company">Company</FormLabel>
+                        <FormLabel htmlFor="company"><FaBuilding /> Company</FormLabel>
                         <FormInput type="text" name="company" id="company" />
                     </ContactColumn>
                 </ContactRow>
                 <ContactRow>
                     <ContactColumn>
-                        <FaCommentAlt />
-                        <FormLabel htmlFor="message">Message</FormLabel>
+                        <FormLabel htmlFor="message"><FaCommentAlt /> Message</FormLabel>
                         <FromTextArea name="message" id="message" rows="6"></FromTextArea>
                     </ContactColumn>
                 </ContactRow>
                 <ContactRow>
                     <ContactColumn>
-                        <FormInput type="submit" value="Send" className="special" />
+                        <FormButton type="submit" value="Send" />
                     </ContactColumn>
                     <ContactColumn>    
-                        <FormInput type="reset" value="Clear" />
+                        <FormButton type="reset" value="Clear" />
                     </ContactColumn>
                 </ContactRow>
             </Form>
