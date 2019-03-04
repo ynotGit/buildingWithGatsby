@@ -2,12 +2,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const FooterWrapper = styled.div `
+const FooterContainer = styled.footer `
     background: whitesmoke;
     height: 200px;
-`
-
-const FooterContainer = styled.div `
     height: 100%;
     padding: 0.5rem 3rem;
     text-align: center;
@@ -17,12 +14,10 @@ const FooterContainer = styled.div `
 `
 
 const Footer = () => (
-    <FooterWrapper>
-        <FooterContainer>
-            © {new Date().getFullYear()}, 
-            Built with Gatsby 
-        </FooterContainer>
-    </FooterWrapper>
+    <FooterContainer>
+        © {new Date().getFullYear()}, 
+        Built with Gatsby 
+    </FooterContainer>
 )
 
 export default Footer

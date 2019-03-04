@@ -2,12 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { FaEnvelopeOpenText, FaRegAddressCard, FaRegEnvelope, FaMobileAlt, FaBuilding, FaCommentAlt } from 'react-icons/fa'
 
-const ContactWrapper = styled.section `
+const ContactContainer = styled.section `
     text-align: center;
-`
-
-const ContactContainer = styled.div `
-
 `
 
 const Form = styled.form `
@@ -49,15 +45,8 @@ const FormButton = styled.input `
     margin: 10px;
 `
 
-// - top envelope icons
-// - input for name, email, number, company, MessageChannel
-// - icons for each input
-
-
 const Contact = () => (
-    <ContactWrapper>
-        <ContactContainer>
-            <h1>Contact</h1>
+    <ContactContainer>
             <Form name="contact" method="post" action="/success" data-netlify="true" data-netlify-honeypot="bot-field">
                 <FormInput type="hidden" name="bot-field" />
                 <FaEnvelopeOpenText />
@@ -97,7 +86,6 @@ const Contact = () => (
                 </ContactRow>
             </Form>
         </ContactContainer>
-    </ContactWrapper>
 )
 
 export default Contact

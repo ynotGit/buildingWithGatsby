@@ -8,12 +8,9 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import '../styles/main.scss'
 
-const BlogHomeWrapper = styled.section `
+const BlogHomeContainer = styled.section `
   text-align: center;
   padding: 10px 0;
-`
-
-const BlogHomeContainer = styled.div `
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
   margin: 0 20px;
@@ -32,8 +29,6 @@ const CoverImage = styled(Img) `
 const BlogHome = ({data}) => (
     <Layout>
         <SEO title="Blog Home" keywords={['blog']} />
-        <BlogHomeWrapper>
-          <h1>Blog Home</h1>
           <BlogHomeContainer>
             {data.allMarkdownRemark.edges.map(post => (
             <BlogLink 
@@ -46,7 +41,6 @@ const BlogHome = ({data}) => (
             </BlogLink>
           ))}  
         </BlogHomeContainer>
-      </BlogHomeWrapper>
     </Layout>
 )
       

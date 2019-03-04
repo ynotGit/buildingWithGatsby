@@ -2,11 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { FaPencilRuler, FaMobileAlt, FaCode } from 'react-icons/fa';
 
-const ServicesWrapper = styled.section `
-    
-`
-
-const ServicesContainer = styled.div `
+const ServicesContainer = styled.section `
     height: 100%;
     padding: 0.5rem 3rem;
     text-align: center;
@@ -42,43 +38,41 @@ const List = styled.ul `
 `
 
 const Services = () => (
-    <ServicesWrapper>
-        <ServicesContainer>
-            <ServiceColumn>
-                <h2>Design</h2>
-                <FaPencilRuler />
-                <List>
-                    <li>-Full Website / App Design-</li>
-                    <li>-Templating-</li>
-                    <li>-Customer Themes</li>
-                    <li>-Digital Editing-</li>
-                    <li>-Branding Design-</li>
-                </List>
-           </ServiceColumn>
-           <ServiceColumn>
-                <h2>UI / UX</h2>
-                <FaMobileAlt />
-                <List>
-                    <li>-Fully Responsive-</li>
-                    <li>-High Performance-</li>
-                    <li>-Easy Use-</li>
-                    <li>-Engaging-</li>
-                    <li>-Accessible-</li>
-                </List>
-            </ServiceColumn>
-            <ServiceColumn>
-                <h2>Code</h2>
-                <FaCode />
-                <List>
-                    <li>-Client Side-</li>
-                    <li>-Server Side-</li>
-                    <li>-SEO Optimization-</li>
-                    <li>-eCommerce / Online Stores-</li>
-                    <li>-API Integration-</li>
-                </List>
-            </ServiceColumn>
-        </ServicesContainer>
-    </ServicesWrapper>
+    <ServicesContainer>
+        <ServiceColumn>
+            <h2>Design</h2>
+            <FaPencilRuler />
+            <List>
+                <li>-Full Website / App Design-</li>
+                <li>-Templating-</li>
+                <li>-Customer Themes</li>
+                <li>-Digital Editing-</li>
+                <li>-Branding Design-</li>
+            </List>
+        </ServiceColumn>
+        <ServiceColumn>
+            <h2>UI / UX</h2>
+            <FaMobileAlt />
+            <List>
+                <li>-Fully Responsive-</li>
+                <li>-High Performance-</li>
+                <li>-Easy Use-</li>
+                <li>-Engaging-</li>
+                <li>-Accessible-</li>
+            </List>
+        </ServiceColumn>
+        <ServiceColumn>
+            <h2>Code</h2>
+            <FaCode />
+            <List>
+                <li>-Client Side-</li>
+                <li>-Server Side-</li>
+                <li>-SEO Optimization-</li>
+                <li>-eCommerce / Online Stores-</li>
+                <li>-API Integration-</li>
+            </List>
+        </ServiceColumn>
+    </ServicesContainer>
 )
 
 export default Services

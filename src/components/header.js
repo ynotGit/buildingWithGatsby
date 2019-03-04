@@ -4,11 +4,8 @@ import styled from 'styled-components'
 
 import HeaderLogo from '../images/headerLogo.png'
 
-const HeaderWrapper = styled.div `
+const HeaderContainer = styled.header `
   background: whitesmoke;
-`
-
-const HeaderContainer = styled.div `
   margin: 0 auto;
   padding: 0.5rem 3rem;
   display: flex;
@@ -41,7 +38,6 @@ const Nav = styled.nav `
 `
 
 const Header = () => (
-  <HeaderWrapper>
     <HeaderContainer>
       <StyledLogoLink to="/">
         <img src={HeaderLogo} alt="Header Logo"/> 
@@ -56,7 +52,6 @@ const Header = () => (
         </ul>
       </Nav>
     </HeaderContainer>
-  </HeaderWrapper>
 )
 
 export default Header
