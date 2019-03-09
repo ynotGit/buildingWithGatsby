@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import HeaderLogo from '../images/headerLogo.png'
 
-const HeaderContainer = styled.header `
+const HeaderContainer = styled.header`
   background: whitesmoke;
   margin: 0 auto;
   padding: 0.5rem 3rem;
@@ -23,12 +23,12 @@ const StyledLogoLink = styled(Link)`
   }
 `
 
-const Nav = styled.nav `
+const Nav = styled.nav`
   flex: 1;
 
   > ul {
-      list-style: none;
-      text-align: right;
+    list-style: none;
+    text-align: right;
 
     > li {
       display: inline-block;
@@ -38,20 +38,20 @@ const Nav = styled.nav `
 `
 
 const Header = () => (
-    <HeaderContainer>
-      <StyledLogoLink to="/">
-        <img src={HeaderLogo} alt="Header Logo"/> 
-      </StyledLogoLink>
-      <Nav>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
-      </Nav>
-    </HeaderContainer>
+  <HeaderContainer>
+    <StyledLogoLink to="/">
+      <img src={HeaderLogo} alt="Header Logo" />
+    </StyledLogoLink>
+    <Nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Projects</li>
+        <li>Contact</li>
+      </ul>
+    </Nav>
+  </HeaderContainer>
 )
 
 export default Header

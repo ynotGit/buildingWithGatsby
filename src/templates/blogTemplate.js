@@ -1,10 +1,18 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Layout from "../components/layout";
+import Layout from '../components/layout'
 
-const BlogPostContainer = styled.section `
-  color: red;
+const BlogPostContainer = styled.section`
+  text-align: center;
+`
+
+const BlogTitle = styled.h1`
+  padding: 10px 0;
+`
+
+const BlogDate = styled.h2`
+  margin: 10px 0;
 `
 
 export default function Template({
@@ -14,16 +22,16 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-    <BlogPostContainer>
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </BlogPostContainer>
+      <BlogPostContainer>
+        <div className="blog-post">
+          <BlogTitle>{frontmatter.title}</BlogTitle>
+          <BlogDate>{frontmatter.date}</BlogDate>
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </div>
+      </BlogPostContainer>
     </Layout>
   )
 }
