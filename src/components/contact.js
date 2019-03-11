@@ -35,6 +35,7 @@ const ContactColumn = styled.div`
 
 const FormInput = styled.input`
   margin: 10px;
+  border: 1px solid black;
 `
 
 const FormLabel = styled.label`
@@ -48,10 +49,12 @@ const FormLabel = styled.label`
 
 const FromTextArea = styled.textarea`
   margin: 0 10px;
+  border: 1px solid black;
 `
 
 const FormButton = styled.input`
   margin: 10px;
+  border: 1px solid black;
 `
 
 const Contact = () => (
