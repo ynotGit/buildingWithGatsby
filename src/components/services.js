@@ -2,6 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { FaPencilRuler, FaMobileAlt, FaCode } from 'react-icons/fa'
 
+const ServicesWrapper = styled.div`
+  text-align: center;
+  margin: 20px 0;
+`
+
 const ServicesContainer = styled.section`
   height: 100%;
   padding: 0.5rem 3rem;
@@ -37,41 +42,44 @@ const List = styled.ul`
 `
 
 const Services = () => (
-  <ServicesContainer>
-    <ServiceColumn>
-      <h2>Design</h2>
-      <FaPencilRuler />
-      <List>
-        <li>-Full Website / App Design-</li>
-        <li>-Templating-</li>
-        <li>-Customer Themes</li>
-        <li>-Digital Editing-</li>
-        <li>-Branding Design-</li>
-      </List>
-    </ServiceColumn>
-    <ServiceColumn>
-      <h2>UI / UX</h2>
-      <FaMobileAlt />
-      <List>
-        <li>-Fully Responsive-</li>
-        <li>-High Performance-</li>
-        <li>-Easy Use-</li>
-        <li>-Engaging-</li>
-        <li>-Accessible-</li>
-      </List>
-    </ServiceColumn>
-    <ServiceColumn>
-      <h2>Code</h2>
-      <FaCode />
-      <List>
-        <li>-Client Side-</li>
-        <li>-Server Side-</li>
-        <li>-SEO Optimization-</li>
-        <li>-eCommerce / Online Stores-</li>
-        <li>-API Integration-</li>
-      </List>
-    </ServiceColumn>
-  </ServicesContainer>
+  <ServicesWrapper>
+    <h1>Services / What We Do</h1>
+    <ServicesContainer>
+      <ServiceColumn>
+        <h2>Design</h2>
+        <FaPencilRuler />
+        <List>
+          <li>-Full Website / App Design-</li>
+          <li>-Templating-</li>
+          <li>-Customer Themes</li>
+          <li>-Digital Editing-</li>
+          <li>-Branding Design-</li>
+        </List>
+      </ServiceColumn>
+      <ServiceColumn>
+        <h2>UI / UX</h2>
+        <FaMobileAlt />
+        <List>
+          <li>-Fully Responsive-</li>
+          <li>-High Performance-</li>
+          <li>-Easy Use-</li>
+          <li>-Engaging-</li>
+          <li>-Accessible-</li>
+        </List>
+      </ServiceColumn>
+      <ServiceColumn>
+        <h2>Code</h2>
+        <FaCode />
+        <List>
+          <li>-Client Side-</li>
+          <li>-Server Side-</li>
+          <li>-SEO Optimization-</li>
+          <li>-eCommerce / Online Stores-</li>
+          <li>-API Integration-</li>
+        </List>
+      </ServiceColumn>
+    </ServicesContainer>
+  </ServicesWrapper>
 )
 
 export default Services

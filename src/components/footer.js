@@ -4,8 +4,7 @@ import styled from 'styled-components'
 
 const FooterContainer = styled.footer`
   background: whitesmoke;
-  height: 200px;
-  height: 100%;
+  height: 300px;
   padding: 0.5rem 3rem;
   text-align: center;
   display: flex;

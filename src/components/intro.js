@@ -12,10 +12,7 @@ const IntroContainer = styled.section`
 
 const Intro = () => (
   <IntroContainer>
-    <h1>
-      We build slick websites with friendly user interaction at the heart of
-      what we do.
-    </h1>
+    <h1>Your super cool company slogan lives here!</h1>
   </IntroContainer>
 )
 

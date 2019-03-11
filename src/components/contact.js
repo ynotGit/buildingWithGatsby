@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import {
-  FaEnvelopeOpenText,
   FaRegAddressCard,
   FaRegEnvelope,
   FaMobileAlt,
@@ -11,10 +10,13 @@ import {
 
 const ContactContainer = styled.section`
   text-align: center;
+  margin: 20px 0;
 `
 
 const Form = styled.form`
   padding: 30px;
+  border: 2px solid black;
+  margin: 0 20px;
 `
 
 const ContactRow = styled.div`
@@ -54,6 +56,7 @@ const FormButton = styled.input`
 
 const Contact = () => (
   <ContactContainer>
+    <h1>Contact Form</h1>
     <Form
       name="contact"
       method="post"
@@ -62,7 +65,6 @@ const Contact = () => (
       data-netlify-honeypot="bot-field"
     >
       <FormInput type="hidden" name="bot-field" />
-      <FaEnvelopeOpenText />
       <ContactRow>
         <ContactColumn>
           <FormLabel htmlFor="name">

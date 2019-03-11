@@ -7,6 +7,8 @@ const BlogPostContainer = styled.section`
   text-align: center;
 `
 
+const BlogPost = styled.div``
+
 const BlogTitle = styled.h1`
   padding: 10px 0;
 `
@@ -14,6 +16,10 @@ const BlogTitle = styled.h1`
 const BlogDate = styled.h2`
   margin: 10px 0;
 `
+
+const CoverImage = styled.img``
+
+const BlogPostContent = styled.div``
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -23,14 +29,12 @@ export default function Template({
   return (
     <Layout>
       <BlogPostContainer>
-        <div className="blog-post">
+        <BlogPost>
           <BlogTitle>{frontmatter.title}</BlogTitle>
           <BlogDate>{frontmatter.date}</BlogDate>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
+          <CoverImage fixed={frontmatter.coverImage.childImageSharp.fluid} />
+          <BlogPostContent dangerouslySetInnerHTML={{ __html: html }} />
+        </BlogPost>
       </BlogPostContainer>
     </Layout>
   )
@@ -44,6 +48,14 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        coverImage {
+          publicURL
+          childImageSharp {
+            fixed(width: 1360, height: 400) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
   }

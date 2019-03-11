@@ -4,8 +4,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
+const BlogWrapper = styled.div`
+  text-align: center;
+  margin: 20px 0;
+`
+
 const BlogContainer = styled.section`
-  padding: 10px 0;
+  padding: 5px 0;
   text-align: center;
   height: 100%;
   display: flex;
@@ -55,20 +60,23 @@ const Blog = () => (
       }
     `}
     render={data => (
-      <BlogContainer>
-        {data.allMarkdownRemark.edges.map(post => (
-          <BlogLink key={post.node.id} to={post.node.frontmatter.path}>
-            <CoverImage
-              fluid={post.node.frontmatter.coverImage.childImageSharp.fluid}
-            />
-            <br />
-            {post.node.frontmatter.title}
-            <br />
-            {post.node.frontmatter.date}
-          </BlogLink>
-        ))}
-        <BlogHomeLink to="blogHome">More Posts</BlogHomeLink>
-      </BlogContainer>
+      <BlogWrapper>
+        <h1>Blog / Latest News</h1>
+        <BlogContainer>
+          {data.allMarkdownRemark.edges.map(post => (
+            <BlogLink key={post.node.id} to={post.node.frontmatter.path}>
+              <CoverImage
+                fluid={post.node.frontmatter.coverImage.childImageSharp.fluid}
+              />
+              <br />
+              {post.node.frontmatter.title}
+              <br />
+              {post.node.frontmatter.date}
+            </BlogLink>
+          ))}
+          <BlogHomeLink to="blogHome">More Posts</BlogHomeLink>
+        </BlogContainer>
+      </BlogWrapper>
     )}
   />
 )
