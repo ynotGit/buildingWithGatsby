@@ -9,5 +9,4 @@ coverImage: 'test.png'
 published: true
 ---
 
-![Test](test.png)
 #TEST4
