@@ -8,6 +8,11 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import '../styles/main.scss'
 
+const BlogTitle = styled.h1`
+  text-align: center;
+  padding: 10px 0;
+`
+
 const BlogHomeContainer = styled.section`
   text-align: center;
   padding: 10px 0;
@@ -28,6 +33,7 @@ const CoverImage = styled(Img)`
 const BlogHome = ({ data }) => (
   <Layout>
     <SEO title="Blog Home" keywords={['blog']} />
+    <BlogTitle>All Your Blog Posts Live Here!</BlogTitle>
     <BlogHomeContainer>
       {data.allMarkdownRemark.edges.map(post => (
         <BlogLink key={post.node.id} to={post.node.frontmatter.path}>
