@@ -19,6 +19,19 @@ const BlogDate = styled.h2`
 
 const BlogPostContent = styled.div``
 
+const OtherPosts = styled.div`
+  display: flex;
+  margin: 20px 0;
+`
+
+const NextPost = styled.div`
+  flex: 1;
+`
+
+const PrevPost = styled.div`
+  flex: 1;
+`
+
 const Template = ({ data, pageContext }) => {
   const { next, prev } = pageContext
   const { markdownRemark } = data
@@ -31,8 +44,14 @@ const Template = ({ data, pageContext }) => {
           <BlogDate>{frontmatter.date}</BlogDate>
           <BlogPostContent dangerouslySetInnerHTML={{ __html: html }} />
         </BlogPost>
-        {next && <Link to={next.frontmatter.path}>Next Post</Link>}
-        {prev && <Link to={prev.frontmatter.path}>Previous Post</Link>}
+        <OtherPosts>
+          <NextPost>
+            {next && <Link to={next.frontmatter.path}>Next Post</Link>}
+          </NextPost>
+          <PrevPost>
+            {prev && <Link to={prev.frontmatter.path}>Previous Post</Link>}
+          </PrevPost>
+        </OtherPosts>
       </BlogPostContainer>
     </Layout>
   )
