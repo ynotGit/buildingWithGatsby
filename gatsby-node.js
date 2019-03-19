@@ -42,8 +42,8 @@ exports.createPages = ({ actions, graphql }) => {
         component: blogPostTemplate,
         context: {
           pathSlug: path,
-          prev: index === 0 ? null : posts[index - 1].node,
-          next: index === posts.length - 1 ? null : posts[index + 1].node,
+          next: index === 0 ? null : posts[index - 1].node,
+          prev: index === posts.length - 1 ? null : posts[index + 1].node,
         },
       })
     })
