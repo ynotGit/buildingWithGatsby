@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 
@@ -19,7 +19,8 @@ const BlogDate = styled.h2`
 
 const BlogPostContent = styled.div``
 
-const Template = ({ data }) => {
+const Template = ({ data, pageContext }) => {
+  const { next, prev } = pageContext
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (
@@ -30,6 +31,8 @@ const Template = ({ data }) => {
           <BlogDate>{frontmatter.date}</BlogDate>
           <BlogPostContent dangerouslySetInnerHTML={{ __html: html }} />
         </BlogPost>
+        {next && <Link to={next.frontmatter.path}>Next Post</Link>}
+        {prev && <Link to={prev.frontmatter.path}>Previous Post</Link>}
       </BlogPostContainer>
     </Layout>
   )
