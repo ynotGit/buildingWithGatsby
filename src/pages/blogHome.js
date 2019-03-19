@@ -10,7 +10,7 @@ import '../styles/main.scss'
 
 const BlogTitle = styled.h1`
   text-align: center;
-  padding: 10px 0;
+  padding: 10px;
 `
 
 const BlogHomeContainer = styled.section`
