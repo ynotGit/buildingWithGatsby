@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Media from 'react-media'
 
 import MainNav from '../components/mainNav'
+import BurgerNav from '../components/burgerNav'
 import HeaderLogo from '../images/headerLogo.png'
 
 const HeaderContainer = styled.header`
@@ -31,7 +32,7 @@ const Header = () => (
       <img src={HeaderLogo} alt="Header Logo" />
     </StyledLogoLink>
     <Media query="(max-width: 880px)">
-      {matches => (matches ? <p>Burger Nav</p> : <MainNav />)}
+      {matches => (matches ? <BurgerNav /> : <MainNav />)}
     </Media>
   </HeaderContainer>
 )
