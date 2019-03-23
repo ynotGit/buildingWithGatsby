@@ -1,9 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import Media from 'react-media'
 
 import Header from './header'
 import Footer from './footer'
+import MainNav from '../components/mainNav'
+import BurgerNav from '../components/burgerNav'
+
 import './layout.scss'
 
 const Layout = ({ children }) => (
@@ -18,11 +22,14 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div id="outer-container">
+        <Media query="(max-width: 880px)">
+          {matches => (matches ? <BurgerNav /> : <MainNav />)}
+        </Media>
         <Header siteTitle={data.site.siteMetadata.title} />
-        {children}
+        <main id="page-wrap">{children}</main>
         <Footer />
-      </>
+      </div>
     )}
   />
 )
