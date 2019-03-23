@@ -1,8 +1,10 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import Media from 'react-media'
 
 import HeaderLogo from '../images/headerLogo.png'
+import MainNav from './mainNav'
 
 const HeaderContainer = styled.header`
   background: whitesmoke;
@@ -28,6 +30,9 @@ const Header = () => (
     <StyledLogoLink to="/">
       <img src={HeaderLogo} alt="Header Logo" />
     </StyledLogoLink>
+    <Media query="(max-width: 880px)">
+      {matches => (matches ? null : <MainNav />)}
+    </Media>
   </HeaderContainer>
 )
 

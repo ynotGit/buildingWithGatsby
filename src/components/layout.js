@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
     render={data => (
       <div id="outer-container">
         <Media query="(max-width: 880px)">
-          {matches => (matches ? <BurgerNav /> : <MainNav />)}
+          {matches => (matches ? <BurgerNav /> : null)}
         </Media>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main id="page-wrap">{children}</main>
