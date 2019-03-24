@@ -5,7 +5,6 @@ import Media from 'react-media'
 
 import Header from './header'
 import Footer from './footer'
-import MainNav from '../components/mainNav'
 import BurgerNav from '../components/burgerNav'
 
 import './layout.scss'
