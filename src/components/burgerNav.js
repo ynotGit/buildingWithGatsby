@@ -30,6 +30,8 @@ const styles = {
     background: '#373a47',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
+    display: 'flex',
+    flexDirection: 'column',
   },
   bmMorphShape: {
     fill: '#373a47',
@@ -37,16 +39,19 @@ const styles = {
   bmItemList: {
     color: '#b8b7ad',
     padding: '0.8em',
+    textDecoration: 'none',
   },
   bmItem: {
-    display: 'inline-block',
+    textAlign: 'center',
+    display: 'block',
+    color: 'white',
+    margin: '50% 0',
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)',
   },
 }
 
-const showSettings = e => e.preventDefault()
 const isMenuOpen = state => state.isOpen
 
 const BurgerNav = () => (
@@ -54,14 +59,17 @@ const BurgerNav = () => (
     <a id="home" className="menu-item" href="/">
       Home
     </a>
-    <a id="about" className="menu-item" href="/about">
+    <a id="about" className="menu-item" href="/">
       About
     </a>
-    <a id="contact" className="menu-item" href="/contact">
-      Contact
+    <a id="services" className="menu-item" href="/">
+      Services
     </a>
-    <a onClick={showSettings} className="menu-item--small" href="">
-      Settings
+    <a id="projects" className="menu-item" href="/">
+      Projects
+    </a>
+    <a id="contact" className="menu-item" href="/">
+      Contact
     </a>
   </BurgerMenu>
 )
